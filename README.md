@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/opspec-pkgs/github.repo.team.add.svg?branch=master)](https://travis-ci.org/opspec-pkgs/github.repo.team.add)
+[![Build Status](https://github.com/opspec-pkgs/github.repo.team.add/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/github.repo.team.add/actions?query=workflow%3Abuild+branch%3Amain)
 
 <img src="icon.svg" alt="icon" height="100px">
 
@@ -6,16 +6,12 @@
 
 adds a github team to a repo (or updates permissions)
 
-# Format
-
-this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
-
 # Example usage
 
-## Install
+## Visualize
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/github.repo.team.add#1.1.0
+opctl ui github.com/opspec-pkgs/github.repo.team.add#1.1.0
 ```
 
 ## Run
@@ -28,20 +24,20 @@ opctl run github.com/opspec-pkgs/github.repo.team.add#1.1.0
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/github.repo.team.add#1.1.0 }
+  ref: github.com/opspec-pkgs/github.repo.team.add#1.1.0
   inputs:
-    accessToken:
-    repo:
-    teamId:
-    org:
-    # params w/ default
-    permission:
+    accessToken:  # 👈 required; provide a value
+    org:  # 👈 required; provide a value
+    repo:  # 👈 required; provide a value
+    teamId:  # 👈 required; provide a value
+  ## uncomment to override defaults
+  #   permission: "pull"
 ```
 
 # Support
 
 join us on
-[![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+[![Slack](https://img.shields.io/badge/slack-opctl-E01563.svg)](https://join.slack.com/t/opctl/shared_invite/zt-51zodvjn-Ul_UXfkhqYLWZPQTvNPp5w)
 or
 [open an issue](https://github.com/opspec-pkgs/github.repo.team.add/issues)
 
@@ -55,4 +51,4 @@ and [tagged](https://git-scm.com/book/en/v2/Git-Basics-Tagging); see
 # Contributing
 
 see
-[project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/master/CONTRIBUTING.md)
+[project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/main/CONTRIBUTING.md)
